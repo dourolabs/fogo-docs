@@ -6,8 +6,6 @@ export default defineConfig({
   description: "Fogo docs site",
   srcDir: "src",
   themeConfig: {
-    // https://vitepress.dev/reference/default-theme-config
-
     siteTitle: "Fogo",
     sidebar: [
       {
@@ -24,7 +22,5 @@ export default defineConfig({
     socialLinks: [{ icon: "x", link: "https://x.com/fogochain" }],
   },
   // Redirect root to API examples
-  rewrites: {
-    "/": "/api-examples.md",
-  },
+  rewrites: {},
 });
