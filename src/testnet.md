@@ -5,9 +5,9 @@
 - Public RPC endpoint: `https://testnet.fogo.io`
 - Entrypoint: `testnet-entrypoint.fogo.io:8001`
 
-- Bank hash: `8UYw1M8jF9zKcrYC1jLhbtEFc9yTsCwXLRafMi33Vas8`
 - Genesis hash: `9GGSFo95raqzZxWqKM5tGYvJp5iv4Dm565S4r8h5PEu9`
-- Shred version: `19594`
+- Bank hash: `4bNWYnpUKqMjoZUNUGtc1ZKXpCVGUkZgGCVpc8BQNenn`
+- Shred version: `34883`
 
 ## Example Configuration
 
@@ -34,9 +34,9 @@ path = "<YOUR_LEDGER_PATH>"
 # file (generated with solana-keygen new).
 identity_path = "<YOUR_IDENTITY_KEYPAIR_PATH>"
 
-expected_bank_hash = "8UYw1M8jF9zKcrYC1jLhbtEFc9yTsCwXLRafMi33Vas8"
 expected_genesis_hash = "9GGSFo95raqzZxWqKM5tGYvJp5iv4Dm565S4r8h5PEu9"
-expected_shred_version = 19594
+expected_bank_hash = "4bNWYnpUKqMjoZUNUGtc1ZKXpCVGUkZgGCVpc8BQNenn"
+expected_shred_version = 34883
 
 [snapshots]
 full_snapshot_interval_slots = 22500
