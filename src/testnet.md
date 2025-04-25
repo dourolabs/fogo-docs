@@ -6,7 +6,6 @@
 - Entrypoint: `testnet-entrypoint.fogo.io:8001`
 
 - Genesis hash: `9GGSFo95raqzZxWqKM5tGYvJp5iv4Dm565S4r8h5PEu9`
-- Bank hash: `9eKZiUAPxtujFimGxnGEi7AW8kJCxk9jz21Z9GqfF6Dv`
 - Shred version: `298`
 
 ## Example Configuration
