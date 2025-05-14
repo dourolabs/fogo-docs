@@ -1,5 +1,12 @@
 # Releases
 
+## Fogo v5.0.0
+
+This release contains improvement on vote forwarding and introduces a feature activation that enables the native token mint account.
+
+- Source: [fogo-v5.0.0.tar.gz](https://static.fogo.io/fogo-v5.0.0.tar.gz)
+- SHA1 Checksum: `fe4126739790f6c90eaec59c81ad99131037454c`
+
 ## Fogo v4.0.0
 
 This release introduces a feature activation for enabling SPL token and associated token account programs.
