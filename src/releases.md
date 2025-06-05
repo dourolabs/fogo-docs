@@ -1,5 +1,13 @@
 # Releases
 
+
+## Fogo v6.0.0
+
+This release contains support for increasing blockhash life time to 2 minutes and memo program support.
+
+- Source: [fogo-v6.0.0.tar.gz](https://static.fogo.io/fogo-v6.0.0.tar.gz)
+- SHA1 Checksum: `817533105183734d5f4dffb4f0b11b0de2adf38b`
+
 ## Fogo v5.0.0
 
 This release contains improvement on vote forwarding and introduces a feature activation that enables the native token mint account.
