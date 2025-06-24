@@ -1,5 +1,11 @@
 # Releases
 
+## Fogo v7.0.0
+
+This release fixes an issue with the status cache, through a new feature which needs to be activated.
+
+- Source: [fogo-v7.0.0.tar.gz](https://static.fogo.io/fogo-v7.0.0.tar.gz)
+- SHA1 Checksum: `7d2ca6e4e47bf31ffd1c4e04634895acd820984d`
 
 ## Fogo v6.0.0
 
