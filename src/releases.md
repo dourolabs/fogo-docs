@@ -1,5 +1,11 @@
 # Releases
 
+## Fogo v7.0.1
+
+This release fixes an issue where v7.0.0 validators fail to restart.
+- Source [fogo-v7.0.1.tar.gz](https://static.fogo.io/fogo-v7.0.1.tar.gz)
+- SHA1 Checksum: `8c8bde6174bc03c48e0b1454a4b427bbe13df03e`
+
 ## Fogo v7.0.0
 
 This release fixes an issue with the status cache, through a new feature which needs to be activated.
