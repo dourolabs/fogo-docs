@@ -1,5 +1,11 @@
 # Releases
 
+## Fogo v8.0.0
+
+This release cleans up the feature introduced in v7.0.0, and re-tightens the snapshot validation on startup.
+- Source [fogo-v8.0.0.tar.gz](https://static.fogo.io/fogo-v8.0.0.tar.gz)
+- SHA1 Checksum: `b9281739fa5d80fc4aa18f00b49e4ef6150474dd`
+
 ## Fogo v7.0.1
 
 This release fixes an issue where v7.0.0 validators fail to restart.
