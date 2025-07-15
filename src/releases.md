@@ -1,5 +1,11 @@
 # Releases
 
+## Fogo v10.0.0
+
+This release contains a variety of reliability and stability improvements, and turns off voting for inactive zones.
+- Source [fogo-v10.0.0.tar.gz](https://static.fogo.io/fogo-v10.0.0.tar.gz)
+- SHA1 Checksum: `5b7b7a18849deb5fd09185828b8c556facd51626`
+
 ## Fogo v8.0.0
 
 This release cleans up the feature introduced in v7.0.0, and re-tightens the snapshot validation on startup.
