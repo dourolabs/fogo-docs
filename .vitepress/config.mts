@@ -13,6 +13,7 @@ export default defineConfig({
         items: [
           { text: "About", link: "/" },
           { text: "Running a Node", link: "/running-a-node" },
+          { text: "Oracles", link: "/oracles" },
           { text: "Releases", link: "/releases" },
           { text: "Testnet", link: "/testnet" },
         ],
