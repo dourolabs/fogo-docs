@@ -16,8 +16,7 @@ Pyth Lazer operates by:
 
 1. **Data Aggregation**: Collecting price data from multiple high-quality sources
 2. **Real-time Processing**: Processing and validating data with minimal delay
-3. **Fast Distribution**: Broadcasting updates through optimized channels
-4. **Smart Contract Integration**: Providing on-chain price feeds for DeFi applications
+3. **Smart Contract Integration**: Providing on-chain price feeds for DeFi applications
 
 ## How to Subscribe to Pyth Lazer Price Updates
 
