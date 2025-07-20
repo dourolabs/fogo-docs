@@ -13,6 +13,7 @@ export default defineConfig({
         items: [
           { text: "Overview", link: "/" },
           { text: "Architecture", link: "/architecture" },
+          { text: "Sessions", link: "/sessions" },
           { text: "Releases", link: "/releases" },
           { text: "Testnet", link: "/testnet" },
         ],
@@ -20,7 +21,7 @@ export default defineConfig({
       {
         text: "User Guides",
         items: [
-          { text: "Using a Wallet", link: "/user-guides/using-a-wallet" },
+          { text: "Using Sessions", link: "/user-guides/using-sessions" },
           {
             text: "Getting Testnet Tokens",
             link: "/user-guides/getting-testnet-tokens",
