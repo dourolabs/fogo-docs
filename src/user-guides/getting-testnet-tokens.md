@@ -1,6 +1,6 @@
 # Getting Testnet Tokens
 
-A public testnet token faucet is available at [https://testnet.solana.com/faucet](https://testnet.solana.com/faucet).
+A public testnet token faucet is available at [https://faucet.fogo.io/](https://faucet.fogo.io/).
 
 There are three options for requesting tokens:
 
