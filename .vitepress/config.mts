@@ -11,10 +11,37 @@ export default defineConfig({
       {
         text: "",
         items: [
-          { text: "About", link: "/" },
-          { text: "Running a Node", link: "/running-a-node" },
+          { text: "Overview", link: "/" },
+          { text: "Architecture", link: "/architecture" },
           { text: "Releases", link: "/releases" },
           { text: "Testnet", link: "/testnet" },
+        ],
+      },
+      {
+        text: "User Guides",
+        items: [
+          { text: "Using a Wallet", link: "/user-guides/using-a-wallet" },
+          {
+            text: "Getting Testnet Tokens",
+            link: "/user-guides/getting-testnet-tokens",
+          },
+          {
+            text: "Using Solana Tools",
+            link: "/user-guides/using-solana-tools",
+          },
+          { text: "Running a Node", link: "/user-guides/running-a-node" },
+        ],
+      },
+      {
+        text: "Ecosystem",
+        items: [
+          { text: "Pyth Lazer Oracle", link: "/ecosystem/pyth-lazer-oracle" },
+          { text: "Wormhole Bridge", link: "/ecosystem/wormhole-bridge" },
+          {
+            text: "Metaplex Tokens & NFTs",
+            link: "/ecosystem/metaplex-tokens-nfts",
+          },
+          { text: "Fogoscan Explorer", link: "/ecosystem/fogoscan-explorer" },
         ],
       },
     ],

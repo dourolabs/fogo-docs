@@ -1,8 +1,38 @@
 # Testnet
 
-## Parameters
+Fogo is currently running in Testnet. Everyone is welcome to join Testnet to deploy and interact with on-chain programs.
 
-- Public RPC endpoint: `https://testnet.fogo.io`
+As a reminder, Testnet tokens have no financial value, and ongoing development may cause network disruptions. Fogo Testnet is also not incentivized, and activity on testnet will have no effect on the upcoming Mainnet deployment.
+
+## Current Setup
+
+Fogo Testnet is currently set up to target 40-millisecond blocks. The duration of the leader term in Fogo is 1500 blocks which means a leader validator will produce at blocks for at least one minute before passing leadership on to the next validator.
+
+Testnet epochs run for 90,000 blocks or about one hour. Each epoch moves consensus to a different zone. The current zones and their respective validator identities are listed below:
+
+- Zone 1 (APAC)
+  - #1: `14bHRv5iPWfvrgnjwwKVzXwQkVVXPr542uR3WUftf9GY`
+  - #2: `26KHFKDHUaD4HRX1eUPcrXJwCD5XrrtPda7CnH4M32ZC`
+  - #3: `4GCrA5ATXg5GixzjW9ZZTXNh5fjWPvhanN5p7YEgxwuA`
+  - #4: `GWSLKT1wLchB5tHcaUK4JRsYaGAtREYv8r4fgcyYAhe8`
+
+- Zone 2 (Europe)
+  - #1: `Bb6g5P2wqzDwJ9faNVqTxEZJj17UbLzNa2fu8wGCdC8M`
+  - #2: `AVfZ4PP1j171wMqZ2FsmCAG5844LhNc2hVHPuVbDCsmd`
+  - #3: `BdjekJZHqD1NLci4kPRZaBnPpdoeCm5wFwrJnxBkgWVY`
+  - #4: `DeAvtKnoG53uHPvfhCtrQcwGTxMvGkf7ChYCifVKvVcX`
+
+- Zone 3 (North America)
+  - #1: `7XbXiCuLnTvV74ZqKpf3w2zL1HfNpYPTgRcvpei5nVkG`
+  - #2: `EFvgxLbUFEPsWTdLXEr32peGvcofpa6WWHDk9gwKFCqU`
+  - #3: `3Hz6CJyPnpDxrEvstwRmishS1JGU5fMdCS1PMFjue1Um`
+  - #4: `2WvEuYVh9CJm7PHoETAvHbXBu5ov7xtGc2nbBC93rgRf`
+
+## Connection Parameters
+
+Douro Labs currently runs a public RPC endpoint for users to interact with Testnet. Users are welcome to download the client source code, build it and join the network.
+
+- RPC URL: `https://testnet.fogo.io`
 - Entrypoint: `testnet-entrypoint.fogo.io:8001`
 
 - Genesis hash: `9GGSFo95raqzZxWqKM5tGYvJp5iv4Dm565S4r8h5PEu9`

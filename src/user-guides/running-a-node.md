@@ -2,15 +2,9 @@
 
 ## System Requirements
 
-#### Minimum
-
-- 16-Core AMD or Intel CPU @ >2.5GHz
-- 64GB RAM
-- 512GB SSD
-
 #### Recommended
 
-- 32-Core CPU @ >3GHz with AVX512 support
+- 24-Core or larger CPU @ >3.5GHz with AVX512 support
 - 128GB RAM with ECC memory
 - 1TB NVMe SSD with separate disk for OS
 - 1 Gigabit/s Network Bandwidth
