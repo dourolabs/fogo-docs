@@ -5,6 +5,9 @@ export default defineConfig({
   title: "Fogo Docs",
   description: "Fogo docs site",
   srcDir: "src",
+  head: [
+    ["link", { rel: "icon", href: "/favicon.svg", type: "image/svg+xml" }],
+  ],
   themeConfig: {
     logo: "/logo.svg",
     siteTitle: false,
