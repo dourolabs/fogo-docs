@@ -1,18 +1,18 @@
-# Integrating Sessions
+# Integrating <Fogo /> Sessions
 
 Currently the main intended mechanism for using sessions is by using the
 `@fogo/sessions-sdk-react` typescript package.
 
 Refer to the following example apps:
-- [NextJS Sessions Example](https://github.com/fogo-foundation/sessions-example)
-- [Vite Sessions Example](https://github.com/fogo-foundation/sessions-example-vite)
+- [NextJS Fogo Sessions Example](https://github.com/fogo-foundation/sessions-example)
+- [Vite Fogo Sessions Example](https://github.com/fogo-foundation/sessions-example-vite)
 
 ## React API
 
 ### `<FogoSessionProvider />`
 
 The `<FogoSessionProvider />` component sets up the React app to be able to use
-Sessions, and adds the necessary context and modal components for creating,
+Fogo Sessions, and adds the necessary context and modal components for creating,
 interacting with, and managing an app session.
 
 The component takes the following props:
@@ -26,8 +26,8 @@ The component takes the following props:
 - `domain`: Fogo Sessions includes a mapping indicating which domains are
   allowed to access which contracts.  This prop should be `undefined` if
   `NODE_ENV === 'production'`, but in lower environments, it allows you to
-  override the domain in the intent message so you can create sessions for
-  your production contracts.
+  override the domain in the intent message so you can create sessions for your
+  production contracts.
 - `endpoint`: The RPC url for Fogo
 - `tokens`: An array of token mint addresses which this app may request
   permissions for
@@ -40,9 +40,9 @@ The component takes the following props:
 ### `<SessionButton />`
 
 The `<SessionButton />` component adds a button to the page which enables users
-to connect to the app using Sessions. When connected, the button opens a panel
-that allows users to see and interact with their wallet balances, and to manage,
-extend, or clear the session.
+to connect to the app using Fogo Sessions. When connected, the button opens a
+panel that allows users to see and interact with their wallet balances, and to
+manage, extend, or clear the session.
 
 The component accepts the following props:
 

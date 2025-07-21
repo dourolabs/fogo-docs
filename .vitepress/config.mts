@@ -8,6 +8,11 @@ export default defineConfig({
   head: [
     ["link", { rel: "icon", href: "/favicon.svg", type: "image/svg+xml" }],
   ],
+  markdown: {
+    component: {
+      inlineTags: ['Fogo'],
+    },
+  },
   themeConfig: {
     logo: "/logo.svg",
     siteTitle: false,
@@ -17,7 +22,7 @@ export default defineConfig({
         items: [
           { text: "Overview", link: "/" },
           { text: "Architecture", link: "/architecture" },
-          { text: "Sessions", link: "/sessions" },
+          { text: "Fogo Sessions", link: "/fogo-sessions" },
           { text: "Releases", link: "/releases" },
           { text: "Testnet", link: "/testnet" },
         ],
@@ -34,8 +39,8 @@ export default defineConfig({
             link: "/user-guides/using-solana-tools",
           },
           {
-            text: "Integrating Sessions",
-            link: "/user-guides/integrating-sessions",
+            text: "Integrating Fogo Sessions",
+            link: "/user-guides/integrating-fogo-sessions",
           },
           { text: "Running a Node", link: "/user-guides/running-a-node" },
         ],

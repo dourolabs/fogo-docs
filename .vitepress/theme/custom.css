@@ -1,0 +1,23 @@
+@import "https://fonts.googleapis.com/css2?family=Funnel+Display:wght@300..800&display=swap";
+@import "https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300..800&display=swap";
+
+:root {
+  --vp-font-family-base: "Funnel Display", sans-serif;
+  --vp-font-family-mono: "JetBrains Mono", mono;
+  --vp-c-brand-1: #ff3d00;
+  --vp-c-brand-2: #d91772;
+  --vp-c-brand-3: #8908c8;
+  --vp-c-text-1: #1e293b;
+  --vp-c-text-2: #334155;
+  --vp-c-text-3: #475569;
+  --vp-c-bg: #f1f5f9;
+  --vp-c-bg-alt: #e2e8f0;
+}
+
+.dark {
+  --vp-c-text-1: #e2e8f0;
+  --vp-c-text-2: #cbd5e1;
+  --vp-c-text-3: #94a3b8;
+  --vp-c-bg: #020617;
+  --vp-c-bg-alt: #0f172a;
+}
