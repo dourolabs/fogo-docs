@@ -40,12 +40,6 @@ export default defineConfig({
           {
             text: "Metaplex Tokens & NFTs",
             link: "/ecosystem/metaplex-tokens-nfts",
-            collapsed: false,
-            items: [
-              { text: "Token Metadata", link: "/ecosystem/token-metadata" },
-              { text: "Core", link: "/ecosystem/core" },
-              { text: "Candy Machine", link: "/ecosystem/candy-machine" },
-            ],
           },
           { text: "Fogoscan Explorer", link: "/ecosystem/fogoscan-explorer" },
         ],
