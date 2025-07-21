@@ -21,7 +21,6 @@ export default defineConfig({
       {
         text: "User Guides",
         items: [
-          { text: "Using Sessions", link: "/user-guides/using-sessions" },
           {
             text: "Getting Testnet Tokens",
             link: "/user-guides/getting-testnet-tokens",
@@ -29,6 +28,10 @@ export default defineConfig({
           {
             text: "Using Solana Tools",
             link: "/user-guides/using-solana-tools",
+          },
+          {
+            text: "Integrating Sessions",
+            link: "/user-guides/integrating-sessions",
           },
           { text: "Running a Node", link: "/user-guides/running-a-node" },
         ],
