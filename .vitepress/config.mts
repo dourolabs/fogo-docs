@@ -2,11 +2,12 @@ import { defineConfig } from "vitepress";
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
-  title: "Fogo",
+  title: "Fogo Docs",
   description: "Fogo docs site",
   srcDir: "src",
   themeConfig: {
-    siteTitle: "Fogo",
+    logo: "/logo.svg",
+    siteTitle: false,
     sidebar: [
       {
         text: "",
