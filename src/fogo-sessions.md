@@ -1,4 +1,4 @@
-# <Fogo /> Sessions
+# Fogo Sessions
 
 Fogo Sessions are a novel chain primitive that enable users to interact with apps on the chain without paying for gas or signing individual transactions.
 

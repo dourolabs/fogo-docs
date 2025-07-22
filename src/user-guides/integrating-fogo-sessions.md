@@ -1,4 +1,4 @@
-# Integrating <Fogo /> Sessions
+# Integrating Fogo Sessions
 
 Currently the main intended mechanism for using sessions is by using the
 `@fogo/sessions-sdk-react` typescript package.
