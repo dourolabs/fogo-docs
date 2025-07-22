@@ -50,6 +50,7 @@ export default defineConfig({
             link: "/ecosystem/metaplex-tokens-nfts",
           },
           { text: "Fogoscan Explorer", link: "/ecosystem/fogoscan-explorer" },
+          { text: "Goldsky Indexer", link: "/ecosystem/goldsky-indexer" },
         ],
       },
     ],
