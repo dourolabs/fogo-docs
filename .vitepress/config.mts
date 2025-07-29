@@ -56,6 +56,7 @@ export default defineConfig({
           },
           { text: "Fogoscan Explorer", link: "/ecosystem/fogoscan-explorer" },
           { text: "Goldsky Indexer", link: "/ecosystem/goldsky-indexer" },
+          { text: "FluxRPC", link: "/ecosystem/md_fluxrpc" },
         ],
       },
     ],
