@@ -2,14 +2,6 @@
 
 The Fogo protocol client follows a simple incrementing number scheme.
 
-## Fogo v11.0.0
-
-This release contains more general reliability improvements. It also makes UDP the default protocol the RPCs use to forward transactions also for better
-reliability.
-
-- Source [fogo-v11.0.0.tar.gz](https://static.fogo.io/fogo-v11.0.0.tar.gz)
-- SHA1 Checksum: `f3b14481d26a0405f4d6bc1bbe6488a4bd15d385`
-
 ## Fogo v10.0.0
 
 This release contains several reliability and stability improvements, and turns off voting outside the active consensus zone.
