@@ -64,8 +64,7 @@ path = "<YOUR_LEDGER_PATH>"
 identity_path = "<YOUR_IDENTITY_KEYPAIR_PATH>"
 
 expected_genesis_hash = "9GGSFo95raqzZxWqKM5tGYvJp5iv4Dm565S4r8h5PEu9"
-expected_bank_hash = "4bNWYnpUKqMjoZUNUGtc1ZKXpCVGUkZgGCVpc8BQNenn"
-expected_shred_version = 34883
+expected_shred_version = 298
 
 [snapshots]
 full_snapshot_interval_slots = 22500
