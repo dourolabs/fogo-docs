@@ -11,6 +11,8 @@
 
 ## Build Instructions
 
+Fogo requires a recent Linux kernel, at least v4.18. Ubuntu 24.04 LTS is recommended.
+
 Go to [releases](/releases) and get the tarball with the client source code.
 
 From within the source directory:
