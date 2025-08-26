@@ -2,6 +2,13 @@
 
 The Fogo protocol client follows a simple incrementing number scheme.
 
+## Fogo V11.0.0
+
+This release contains new lockout formula and some feature id updates so that we can activate them with Fogo feature keypairs.
+
+- Source [fogo-v11.0.0.tar.gz](https://static.fogo.io/fogo-v11.0.0.tar.gz)
+- SHA Checksum: `2848de955c1247195479aa65433b869a044a19a8`
+
 ## Fogo v10.0.0
 
 This release contains several reliability and stability improvements, and turns off voting outside the active consensus zone.
