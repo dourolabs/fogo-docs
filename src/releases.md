@@ -2,6 +2,13 @@
 
 The Fogo protocol client follows a simple incrementing number scheme.
 
+## Fogo V12.0.0
+
+This release contains firedancer update v0.703.20300, as well as support for inflation and Token 2022 program.
+
+- Source [fogo-v12.0.0.tar.gz](https://static.fogo.io/fogo-v12.0.0.tar.gz)
+- SHA Checksum: `3581b03d5b2bff037a6a28c7c3509c827927aac2`
+
 ## Fogo V11.0.0
 
 This release contains new lockout formula and some feature id updates so that we can activate them with Fogo feature keypairs.
