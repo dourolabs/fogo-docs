@@ -3,6 +3,16 @@
 The Fogo protocol client follows a simple incrementing number scheme.
 
 
+## Fogo V13.0.0
+
+This release contains the following fixes:
+1. enable Config, Address Lookup and Feature Gate programs
+2. new genesis tool (fdgenesis)
+3. activate token 2022 again (fix for previous deployment mistake)
+
+- Source [fogo-v13.0.0.tar.gz](https://static.fogo.io/fogo-v13.0.0.tar.gz)
+- SHA Checksum: `02cf1989ea50808c247407584a2715c49e9b3034`
+
 ## Fogo V12.0.0
 
 This release contains firedancer update v0.703.20300, as well as support for inflation and Token 2022 program.
