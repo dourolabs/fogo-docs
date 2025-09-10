@@ -3,6 +3,13 @@
 The Fogo validator client is distributed as a source code tarball. See [Running a Node](/user-guides/running-a-node) for instructions.
 
 
+## Fogo v14.0.0
+
+This release includes firedancer net tile fix, ip_whitelist for xdp tile, replace core bpf programs (Config/AddressLookup/FeatureGate).
+
+- Source [fogo-v14.0.0.tar.gz](https://static.fogo.io/fogo-v14.0.0.tar.gz)
+- SHA Checksum: `d5e3493a7192cbb3713f92870205c085b0fa163d`
+
 ## Fogo v13.0.0
 
 This release introduces the `fdgenesis` tool, brings back support for built-in programs (config, alt, feature gate), and readds a feature to move the Token2022 program.
