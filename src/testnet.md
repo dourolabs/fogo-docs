@@ -36,7 +36,7 @@ Douro Labs currently runs a public RPC endpoint for users to interact with Testn
 - Entrypoint: `testnet-entrypoint.fogo.io:8001`
 
 - Genesis hash: `9GGSFo95raqzZxWqKM5tGYvJp5iv4Dm565S4r8h5PEu9`
-- Shred version: `298`
+- Shred version: `2466`
 
 ## Example Configuration
 
@@ -64,7 +64,7 @@ path = "<YOUR_LEDGER_PATH>"
 identity_path = "<YOUR_IDENTITY_KEYPAIR_PATH>"
 
 expected_genesis_hash = "9GGSFo95raqzZxWqKM5tGYvJp5iv4Dm565S4r8h5PEu9"
-expected_shred_version = 298
+expected_shred_version = 2466
 
 [snapshots]
 full_snapshot_interval_slots = 22500
