@@ -1,3 +1,4 @@
 .vitepress/cache
+.direnv
+.envrc
 node_modules
-.direnv/
