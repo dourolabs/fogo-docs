@@ -2,6 +2,19 @@
 
 The Fogo validator client is distributed as a source code tarball. See [Running a Node](/user-guides/running-a-node) for instructions.
 
+## Fogo v16.0.0
+
+This release contains bug fixes for two conditions that could prevent nodes from reaching consensus.
+
+- Source [fogo-v16.0.0.tar.gz](https://static.fogo.io/fogo-v16.0.0.tar.gz)
+- SHA Checksum: `f68da7ebb614f4bcafe563471aab7b31745ff973`
+
+## Fogo v15.0.0
+
+This release introduces a verification mechanism for genesis on new Fogo instances.
+
+- Source [fogo-v15.0.0.tar.gz](https://static.fogo.io/fogo-v15.0.0.tar.gz)
+- SHA Checksum: `fbdec608e9db4fdf5e9612016ba562d203df64a7`
 
 ## Fogo v14.0.0
 
