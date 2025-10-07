@@ -2,6 +2,13 @@
 
 The Fogo validator client is distributed as a source code tarball. See [Running a Node](/user-guides/running-a-node) for instructions.
 
+## Fogo v17.0.0
+
+This release adjusts the account CU limit parameters on the leader code path.
+
+- Source [fogo-v17.0.0.tar.gz](https://static.fogo.io/fogo-v17.0.0.tar.gz)
+- SHA Checksum: `ae33bdce1929be90e8a1ea8ff1ac03221c7b3189`
+
 ## Fogo v16.0.0
 
 This release contains bug fixes for two conditions that could prevent nodes from reaching consensus.
