@@ -18,7 +18,7 @@ Go to [releases](/releases) and get the tarball with the client source code.
 From within the source directory:
 
 1. Execute the `./deps.sh` script (confirm with “y”) to install system dependencies
-2. Run `make -j fdctl` to build the `fdctl` binary.
+2. Run `make -j agave-ledger-tool solana fdctl` to build the `fdctl` binary and the required utilities for operation.
 
 Then, set up your node machine and create a config file using the [Testnet config example](/testnet.html#example-configuration). To start the validator:
 
