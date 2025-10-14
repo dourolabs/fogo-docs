@@ -31,6 +31,10 @@ export default defineConfig({
         text: "User Guides",
         items: [
           {
+            text: "Building on Fogo",
+            link: "/user-guides/building-on-fogo",
+          },
+          {
             text: "Getting Testnet Tokens",
             link: "/user-guides/getting-testnet-tokens",
           },
