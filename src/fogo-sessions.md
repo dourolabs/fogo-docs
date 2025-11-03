@@ -19,5 +19,5 @@ Fogo Sessions includes centralized paymasters, which enable users to transact on
 The intent message includes some mechanisms to protect users:
 
 - There is a `domain` field which must match the origin domain of the running app.  This helps prevent XSS attacks involving phishing a user to sign a session for a different app.
-- Fogo Sessions can either be limited or unlimited.  A limited session includes a list of tokens and the limit to how many of those tokens the app is allowed to interact with.  This mechanism enables users to explore new apps they may not yet trust, without having to create a separate & fund a separate wallet.
+- Fogo Sessions can either be limited or unlimited.  A limited session includes a list of tokens and the limit to how many of those tokens the app is allowed to interact with.  This mechanism enables users to explore new apps they may not yet trust, without having to create and fund a separate wallet.
 - Fogo Sessions have an expiry and must be renewed after expiring.
