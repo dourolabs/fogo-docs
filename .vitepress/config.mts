@@ -59,6 +59,7 @@ export default defineConfig({
             text: "Metaplex Tokens & NFTs",
             link: "/ecosystem/metaplex-tokens-nfts",
           },
+          { text: "Squads Multisig", link: "/ecosystem/squads-multisig" },
           { text: "Fogoscan Explorer", link: "/ecosystem/fogoscan-explorer" },
           { text: "Goldsky Indexer", link: "/ecosystem/goldsky-indexer" },
           { text: "FluxRPC", link: "/ecosystem/md_fluxrpc" },
