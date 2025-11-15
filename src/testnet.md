@@ -36,7 +36,7 @@ Douro Labs currently runs a public RPC endpoint for users to interact with Testn
 - Entrypoint: `testnet-entrypoint.fogo.io:8001`
 
 - Genesis hash: `9GGSFo95raqzZxWqKM5tGYvJp5iv4Dm565S4r8h5PEu9`
-- Shred version: `2466`
+- Shred version: `12481`
 
 ## Example Configuration
 
