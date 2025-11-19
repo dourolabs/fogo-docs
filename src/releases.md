@@ -2,6 +2,12 @@
 
 The Fogo validator client is distributed as a source code tarball. See [Running a Node](/user-guides/running-a-node) for instructions.
 
+## Fogo v19.0.0
+
+This release sets inflation to a fixed 2%, adds priority repair support, updates block limits, and improves RPC CPU usage.
+
+- Source [fogo-v19.0.0.tar.gz](https://static.fogo.io/fogo-v19.0.0.tar.gz)
+- SHA Checksum: `9154095b0e21c4133be855b66f561f2a8d826921`
 
 ## Fogo v18.0.0
 
