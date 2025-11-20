@@ -63,8 +63,8 @@ path = "<YOUR_LEDGER_PATH>"
 # file (generated with solana-keygen new).
 identity_path = "<YOUR_IDENTITY_KEYPAIR_PATH>"
 
-expected_genesis_hash = "9GGSFo95raqzZxWqKM5tGYvJp5iv4Dm565S4r8h5PEu9"
-expected_shred_version = 2466
+expected_genesis_hash = "<GENESIS_HASH>"
+expected_shred_version = <SHRED_VERSION>
 
 [snapshots]
 full_snapshot_interval_slots = 22500
