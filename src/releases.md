@@ -2,6 +2,22 @@
 
 The Fogo validator client is distributed as a source code tarball. See [Running a Node](/user-guides/running-a-node) for instructions.
 
+## Fogo v20.0.0
+
+This releases includes multiple changes, including pulling gossip, repair serving under XDP, and support for native token wrapping ant transfering with sessions, reducing consequtive leader slots. It also fixes, an IPv4 networking issue.
+
+### Breaking changes:
+- Gossip, repair and ancestor hashes default ports changed due to switching them to use XDP:
+  - Gossip default port now is: `9010` to ensure you can connect to the network, make sure to update your entrypoints array to point to both `8001` and `9010` ports of the hosts that it contains.
+- `expected_shred_version` is now a mandatory field in the config, see the relevant Running a node guide for the cluster you are joining to get the current shred version, and set it before startup.
+- Memory layout of the validator was changed, this means the configuration needs to be re-initialized: `fdctl fini all --config <config>` and `fdctl init all --config <config>` commands with the required configuration need to be re-run, if memory is too fragmanted, this might require restarting the machine.
+  - If you see this kind of error in the logs: `ENOMEM-Out of memory when trying to reserve gigantic pages for it means the hugepages are not correctly initialized, and you have to re-initialize them.`
+  - If the error contains `This error can also happen because system uptime is high and memory is fragmented. You can fix this by rebooting the machine and running the hugetlbfs stage immediately on boot.` it means you have to restart the machine due to memory being too fragmanted to reserve the new pages.
+
+- Source: [fogo-v20.0.0.tar.gz](https://static.fogo.io/fogo-v20.0.0.tar.gz)
+- SHA1 Checksum: `0fac807bb47179bb4eff427a83a66fc922eb46e4`
+
+
 ## Fogo v19.0.1
 
 This releases includes a fix in the build dependencies script to work outside a git repository.
