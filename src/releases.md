@@ -15,7 +15,7 @@ This releases includes multiple changes, including pulling gossip, repair servin
   - If the error contains `This error can also happen because system uptime is high and memory is fragmented. You can fix this by rebooting the machine and running the hugetlbfs stage immediately on boot.` it means you have to restart the machine due to memory being too fragmanted to reserve the new pages.
 
 ### Notes
-- The validator might log something like: "src/app/platform/fd_config_extract.c(65): Config file contains unrecognized key `fogo.threads.rpc`" Please ignore it, its not an actual issue.
+- The validator might log something like: `src/app/platform/fd_config_extract.c(65): Config file contains unrecognized key fogo.threads.rpc` Please ignore it, its not an actual issue.
 
 - Source: [fogo-v20.0.0.tar.gz](https://static.fogo.io/fogo-v20.0.0.tar.gz)
 - SHA1 Checksum: `0fac807bb47179bb4eff427a83a66fc922eb46e4`
