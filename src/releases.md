@@ -4,7 +4,7 @@ The Fogo validator client is distributed as a source code tarball. See [Running 
 
 ## Fogo v20.0.0
 
-This releases includes multiple changes, including pulling gossip, repair serving under XDP, and support for native token wrapping ant transfering with sessions, reducing consequtive leader slots. It also fixes, an IPv4 networking issue.
+This releases includes multiple changes, including moving gossip and repair service traffic to XDP, support for native token wrapping/transfering with Fogo Sessions, reducing consecutive leader slots. and some bug fixes.
 
 ### Breaking changes:
 - Gossip, repair and ancestor hashes default ports changed due to switching them to use XDP:
