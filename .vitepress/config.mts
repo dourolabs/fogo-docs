@@ -24,6 +24,7 @@ export default defineConfig({
           { text: "Architecture", link: "/architecture" },
           { text: "Fogo Sessions", link: "/fogo-sessions" },
           { text: "Releases", link: "/releases" },
+          { text: "Mainnet", link: "/mainnet" },
           { text: "Testnet", link: "/testnet" },
           { text: "Audit Reports", link: "https://github.com/fogo-foundation/audit-reports" },
         ],
