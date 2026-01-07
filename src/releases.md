@@ -8,7 +8,7 @@ This releases includes multiple changes, including pulling gossip, repair servin
 
 ### Breaking changes:
 - Gossip, repair and ancestor hashes default ports changed due to switching them to use XDP:
-  - Gossip default port now is: `9010` to ensure you can connect to the network, make sure to update your entrypoints array to point to both `8001` and `9010` ports of the hosts that it contains.
+  - Gossip default port now is: `9010` to ensure you can connect to the network, make sure to update your entrypoints array to point to both `8001` and `9010` ports of the hosts that it contains. See [Testnet Connection Parameters](https://docs.fogo.io/testnet.html#connection-parameters) or [Mainnet Connection Parameters](https://docs.fogo.io/mainnet.html#connection-parameters) for an example of the entrypoints variable.
 - `expected_shred_version` is now a mandatory field in the config, see the relevant Running a node guide for the cluster you are joining to get the current shred version, and set it before startup.
 - Memory layout of the validator was changed, this means the configuration needs to be re-initialized: `fdctl fini all --config <config>` and `fdctl init all --config <config>` commands with the required configuration need to be re-run, if memory is too fragmanted, this might require restarting the machine.
   - If you see this kind of error in the logs: `ENOMEM-Out of memory when trying to reserve gigantic pages for it means the hugepages are not correctly initialized, and you have to re-initialize them.`
