@@ -2,8 +2,6 @@
 
 Fogo Mainnet is live. Everyone is welcome to join Mainnet to deploy and interact with on-chain programs.
 
-As a reminder, Mainnet tokens have financial value. Mainnet is incentivized, and activity on mainnet will affect the live network.
-
 ## Current Setup
 
 Mainnet currently runs with a single active zone. The active zone and validator identities are listed below:
@@ -17,11 +15,9 @@ Mainnet currently runs with a single active zone. The active zone and validator 
   - #6: `Fogeeb6AJcPewoEJ3DBqpBq4VD8H5nUJ91re12QnVVf`
   - #7: `ARi7JKhd2RnCA1iKPeXcvRF72iM5hqbfevdCPjkVfdXr`
 
-Additional zones will be added later.
-
 ## Connection Parameters
 
-Douro Labs currently runs a public RPC endpoint for users to interact with Mainnet. Users are welcome to download the client source code, build it and join the network.
+A public RPC endpoint is available for users to interact with Mainnet. Users are welcome to download the client source code, build it, and join the network.
 
 - RPC URL: `https://mainnet.fogo.io`
 - Entrypoints: `["entrypoint1.mainnet.fogo.io:8001", "entrypoint2.mainnet.fogo.io:8001", "entrypoint3.mainnet.fogo.io:8001", "entrypoint1.mainnet.fogo.io:9010", "entrypoint2.mainnet.fogo.io:9010", "entrypoint3.mainnet.fogo.io:9010"]`

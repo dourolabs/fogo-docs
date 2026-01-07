@@ -30,7 +30,7 @@ Testnet epochs run for 90,000 blocks or about one hour. Each epoch moves consens
 
 ## Connection Parameters
 
-Douro Labs currently runs a public RPC endpoint for users to interact with Testnet. Users are welcome to download the client source code, build it and join the network.
+A public RPC endpoint is available for users to interact with Testnet. Users are welcome to download the client source code, build it, and join the network.
 
 - RPC URL: `https://testnet.fogo.io`
 - Entrypoints: `["entrypoint1.testnet.fogo.io:8001", "entrypoint2.testnet.fogo.io:8001", "entrypoint3.testnet.fogo.io:8001", "entrypoint1.testnet.fogo.io:9010", "entrypoint2.testnet.fogo.io:9010", "entrypoint3.testnet.fogo.io:9010"]`
