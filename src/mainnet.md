@@ -20,7 +20,7 @@ Mainnet currently runs with a single active zone. The active zone and validator 
 A public RPC endpoint is available for users to interact with Mainnet. Users are welcome to download the client source code, build it, and join the network.
 
 - RPC URL: `https://mainnet.fogo.io`
-- Entrypoints: `["entrypoint1.mainnet.fogo.io:8001", "entrypoint2.mainnet.fogo.io:8001", "entrypoint3.mainnet.fogo.io:8001", "entrypoint1.mainnet.fogo.io:9010", "entrypoint2.mainnet.fogo.io:9010", "entrypoint3.mainnet.fogo.io:9010"]`
+- Entrypoints: `["entrypoint1.mainnet.fogo.io:9010", "entrypoint2.mainnet.fogo.io:9010", "entrypoint3.mainnet.fogo.io:9010"]`
 - Genesis hash: `CDLtwKnaCoK157uaHQDj4fHu72AyD2519Cphmpiq6hvT`
 - Shred version: `715`
 
@@ -34,7 +34,7 @@ user = "fogo"
 # with this node.
 host = "<YOUR_PUBLIC_IP>"
 
-entrypoints = ["entrypoint1.mainnet.fogo.io:8001", "entrypoint2.mainnet.fogo.io:8001", "entrypoint3.mainnet.fogo.io:8001", "entrypoint1.mainnet.fogo.io:9010", "entrypoint2.mainnet.fogo.io:9010", "entrypoint3.mainnet.fogo.io:9010"]
+entrypoints = ["entrypoint1.mainnet.fogo.io:9010", "entrypoint2.mainnet.fogo.io:9010", "entrypoint3.mainnet.fogo.io:9010"]
 
 [tiles.poh]
 lagged_consecutive_leader_start = false

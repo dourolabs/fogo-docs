@@ -33,7 +33,7 @@ Testnet epochs run for 90,000 blocks or about one hour. Each epoch moves consens
 A public RPC endpoint is available for users to interact with Testnet. Users are welcome to download the client source code, build it, and join the network.
 
 - RPC URL: `https://testnet.fogo.io`
-- Entrypoints: `["entrypoint1.testnet.fogo.io:8001", "entrypoint2.testnet.fogo.io:8001", "entrypoint3.testnet.fogo.io:8001", "entrypoint1.testnet.fogo.io:9010", "entrypoint2.testnet.fogo.io:9010", "entrypoint3.testnet.fogo.io:9010"]`
+- Entrypoints: `["entrypoint1.testnet.fogo.io:9010", "entrypoint2.testnet.fogo.io:9010", "entrypoint3.testnet.fogo.io:9010"]`
 
 - Genesis hash: `9GGSFo95raqzZxWqKM5tGYvJp5iv4Dm565S4r8h5PEu9`
 - Shred version: `12481`
@@ -48,7 +48,7 @@ user = "fogo"
 # with this node.
 host = "<YOUR_PUBLIC_IP>"
 
-entrypoints = ["entrypoint1.testnet.fogo.io:8001", "entrypoint2.testnet.fogo.io:8001", "entrypoint3.testnet.fogo.io:8001", "entrypoint1.testnet.fogo.io:9010", "entrypoint2.testnet.fogo.io:9010", "entrypoint3.testnet.fogo.io:9010"]
+entrypoints = ["entrypoint1.testnet.fogo.io:9010", "entrypoint2.testnet.fogo.io:9010", "entrypoint3.testnet.fogo.io:9010"]
 
 [tiles.poh]
 lagged_consecutive_leader_start = false
