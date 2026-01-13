@@ -64,6 +64,7 @@ export default defineConfig({
           { text: "Goldsky Indexer", link: "/ecosystem/goldsky-indexer" },
           { text: "FluxRPC", link: "/ecosystem/md_fluxrpc" },
           { text: "Birdeye", link: "/ecosystem/birdeye" },
+          { text: "Codex Data API", link: "/ecosystem/codex-data-api" },
         ],
       },
     ],
