@@ -1,6 +1,6 @@
 # Birdeye
 
-[Birdeye](https://birdeye.so/) is a multi-chain token tracker that provides real-time market data, analytics, and trading insights across Solana and major EVM chains.
+[Birdeye](https://birdeye.so/) is a multi-chain token tracker that provides real-time market data, analytics, and trading insights across Fogo, Solana and major EVM chains.
 
 ## Features
 
