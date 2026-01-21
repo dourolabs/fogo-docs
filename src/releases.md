@@ -1,5 +1,7 @@
 # Releases
 
+The Fogo validator source code is available on GitHub: [fogo-foundation/fogo](https://github.com/fogo-foundation/fogo)
+
 The Fogo validator client is distributed as a source code tarball. See [Running a Node](/user-guides/running-a-node) for instructions.
 
 ## Fogo v20.0.0
