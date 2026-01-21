@@ -14,11 +14,13 @@ To deploy a Solana program on Fogo, you can use the same tools you're already fa
 
 ### Using the Solana CLI
 
-Configure the Solana CLI to use a Fogo Testnet RPC endpoint:
+Configure the Solana CLI to use the Fogo Mainnet RPC endpoint:
 
 ```bash
-solana config set --url https://testnet.fogo.io
+solana config set --url https://mainnet.fogo.io
 ```
+
+For testnet RPCs and other RPC providers, see the [RPCs](/rpcs) page.
 
 Once configured, deploy your program using the standard deployment command:
 
@@ -34,7 +36,7 @@ Anchor, the popular Solana development framework, works seamlessly with Fogo. Up
 
 ```toml
 [provider]
-cluster = "https://testnet.fogo.io"
+cluster = "https://mainnet.fogo.io"
 ```
 
 Then deploy your Anchor program as usual:

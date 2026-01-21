@@ -4,13 +4,15 @@ Fogo is fully compatible with Solana runtime (SVM) and RPC interface which means
 
 Fogo will soon have its own CLI toolkit, but in the meantime you can follow the [Install the Solana CLI](https://docs.anza.xyz/cli/install) guide to get started.
 
-Once you have the Solana CLI, point it to a Fogo Testnet RPC endpoint:
+Once you have the Solana CLI, point it to the Fogo Mainnet RPC endpoint:
 
 ```bash
-solana config set --url https://testnet.fogo.io
+solana config set --url https://mainnet.fogo.io
 ```
 
-Now you can interact with the Fogo Testnet using the Solana CLI. You can also pass the RPC endpoint as the value of the `--url` parameter in a command.
+For testnet RPCs and other RPC providers, see the [RPCs](/rpcs) page.
+
+Now you can interact with Fogo using the Solana CLI. You can also pass the RPC endpoint as the value of the `--url` parameter in a command.
 
 ## Using file keypairs
 
