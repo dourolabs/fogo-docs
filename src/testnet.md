@@ -6,7 +6,7 @@ As a reminder, Testnet tokens have no financial value, and ongoing development m
 
 ## Current Setup
 
-Fogo Testnet is currently set up to target 40-millisecond blocks. The duration of the leader term in Fogo is 1500 blocks which means a leader validator will produce at blocks for at least one minute before passing leadership on to the next validator.
+Fogo Testnet is currently set up to target 40-millisecond blocks. The duration of the leader term in Fogo is 375 blocks which means a leader validator will produce at blocks for at least 15 seconds before passing leadership on to the next validator.
 
 Testnet epochs run for 90,000 blocks or about one hour. Each epoch moves consensus to a different zone. The current zones and their respective validator identities are listed below:
 
@@ -30,10 +30,10 @@ Testnet epochs run for 90,000 blocks or about one hour. Each epoch moves consens
 
 ## Connection Parameters
 
-Douro Labs currently runs a public RPC endpoint for users to interact with Testnet. Users are welcome to download the client source code, build it and join the network.
+A public RPC endpoint is available for users to interact with Testnet. Users are welcome to download the client source code, build it, and join the network.
 
 - RPC URL: `https://testnet.fogo.io`
-- Entrypoints: `["entrypoint1.testnet.fogo.io:8001", "entrypoint2.testnet.fogo.io:8001", "entrypoint3.testnet.fogo.io:8001", "entrypoint1.testnet.fogo.io:9010", "entrypoint2.testnet.fogo.io:9010", "entrypoint3.testnet.fogo.io:9010"]`
+- Entrypoints: `["entrypoint1.testnet.fogo.io:9010", "entrypoint2.testnet.fogo.io:9010", "entrypoint3.testnet.fogo.io:9010"]`
 
 - Genesis hash: `9GGSFo95raqzZxWqKM5tGYvJp5iv4Dm565S4r8h5PEu9`
 - Shred version: `12481`
@@ -48,7 +48,7 @@ user = "fogo"
 # with this node.
 host = "<YOUR_PUBLIC_IP>"
 
-entrypoints = ["entrypoint1.testnet.fogo.io:8001", "entrypoint2.testnet.fogo.io:8001", "entrypoint3.testnet.fogo.io:8001", "entrypoint1.testnet.fogo.io:9010", "entrypoint2.testnet.fogo.io:9010", "entrypoint3.testnet.fogo.io:9010"]
+entrypoints = ["entrypoint1.testnet.fogo.io:9010", "entrypoint2.testnet.fogo.io:9010", "entrypoint3.testnet.fogo.io:9010"]
 
 [tiles.poh]
 lagged_consecutive_leader_start = false
