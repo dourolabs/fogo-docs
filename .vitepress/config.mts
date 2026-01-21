@@ -22,6 +22,7 @@ export default defineConfig({
         items: [
           { text: "Overview", link: "/" },
           { text: "Architecture", link: "/architecture" },
+          { text: "RPCs", link: "/rpcs" },
           { text: "Fogo Sessions", link: "/fogo-sessions" },
           { text: "Releases", link: "/releases" },
           { text: "Testnet", link: "/testnet" },
