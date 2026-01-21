@@ -6,7 +6,7 @@ As a reminder, Testnet tokens have no financial value, and ongoing development m
 
 ## Current Setup
 
-Fogo Testnet is currently set up to target 40-millisecond blocks. The duration of the leader term in Fogo is 375 blocks which means a leader validator will produce at blocks for at least one minute before passing leadership on to the next validator.
+Fogo Testnet is currently set up to target 40-millisecond blocks. The duration of the leader term in Fogo is 375 blocks which means a leader validator will produce at blocks for at least 15 seconds before passing leadership on to the next validator.
 
 Testnet epochs run for 90,000 blocks or about one hour. Each epoch moves consensus to a different zone. The current zones and their respective validator identities are listed below:
 
