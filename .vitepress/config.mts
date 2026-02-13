@@ -1,7 +1,19 @@
 import { defineConfig } from "vitepress";
+import { withMermaid } from "vitepress-plugin-mermaid";
 
 // https://vitepress.dev/reference/site-config
-export default defineConfig({
+export default withMermaid({
+  mermaid: {
+    themeVariables: {
+      fontSize: "16px",
+    },
+    sequence: {
+      useMaxWidth: true,
+      actorMargin: 80,
+      messageMargin: 40,
+      diagramMarginX: 40,
+    },
+  },
   title: "Fogo Docs",
   description: "Fogo docs site",
   srcDir: "src",
@@ -50,6 +62,12 @@ export default defineConfig({
             link: "/user-guides/integrating-fogo-sessions",
           },
           { text: "Running a Node", link: "/user-guides/running-a-node" },
+        ],
+      },
+      {
+        text: "Deep Dives",
+        items: [
+          { text: "Fogo Sessions", link: "/deep-dives/fogo-sessions" },
         ],
       },
       {
