@@ -2,7 +2,7 @@
 
 ## Session keys
 
-The core idea behind Fogo Sessions is allowing the user to delegate their permissions within an app to a temporary keypair (Session Key) that's stored in their browser and can sign transactions on behalf of the user from that point onwards, therefore removing the need for more browser wallet popups.
+The core idea behind Fogo Sessions is allowing the user to delegate their permissions within an app to a temporary keypair (Session Key) that's stored in their browser and can sign transactions on behalf of them from that point onwards, therefore removing the need for more browser wallet popups.
 
 When the user first signs in by connecting their browser wallet, they are prompted to sign with their Main Key a human-readable intent message that contains the parameters of the session like duration and token limits. This message is consumed by the Session Manager, an on-chain program, which stores the data about the session (including which Main key has delegated its permissions to the session) in the Session Account whose address is the public key of the Session Key.
 
