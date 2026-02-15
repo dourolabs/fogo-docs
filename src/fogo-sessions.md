@@ -19,3 +19,7 @@ The intent message includes some mechanisms to protect users:
 - Fogo Sessions have a `domain` field which restricts which on-chain programs the session is allow to interact with.
 - Fogo Sessions can either be limited or unlimited.  A limited session includes a list of tokens and the limit to how many of those tokens the app is allowed to interact with.  This mechanism enables users to explore new apps they may not yet trust, without having to create and fund a separate wallet.
 - Fogo Sessions have an expiry and must be renewed after expiring.
+
+## More information 
+
+To learn more about how Sessions works under the hood, read the [Deep Dive](/deep-dives/fogo-sessions).
