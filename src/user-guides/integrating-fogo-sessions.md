@@ -1,5 +1,50 @@
 # Integrating Fogo Sessions
 
+Within the Sessions ecosystem, each app is identified by their base URL aka its domain (for example https://sessions-example.fogo.io).
+
+Integrating Fogo Sessions requires the following steps:
+- Registering your domain in the paymaster server.
+- Setting up your domain's program registry: these are the custom program ids that the sessions for your domain are allowed to interact with.
+- Setting up your paymaster filters.
+- Upgrade your program to accept instructions signed by session keys 
+- Update your frontend to use the FogoSessionProvider.
+
+https://sessions-example.fogo.io is a working example that integrates Fogo Sessions and may be used as a starting point or reference. It uses the pre-configured domain https://sessions-example.fogo.io. Its program registry uniquely contains the program id Examtz9qAwhxcADNFodNA2QpxK7SM9bCHyiaUvWvFBM3 and its paymaster filters will only accept either transactions involving creating or revoking sessions or calling the ExampleTransfer instruction of Examtz9qAwhxcADNFodNA2QpxK7SM9bCHyiaUvWvFBM3.
+
+- The frontend code for the example app can be found: 
+- The example program can be found
+
+## Registering your domain in the paymaster server
+
+Currently this is a permissioned step, please contact the Fogo team with your domain's base URL.
+
+The paymaster API is available at:
+- https://fogo-testnet.dourolabs-paymaster.xyz/ for testnet
+- https://fogo-mainnet.dourolabs-paymaster.xyz/ for mainnet
+
+Once registered, the call to https://fogo-testnet.dourolabs-paymaster.xyz/api/sponsor_pubkey?domain=https://sessions-example.fogo.io should be succesful (replace https://sessions-example.fogo.io by your domain).
+
+## Setting up your paymaster filters
+
+Link to the paymaster runbook.
+
+## Setting up your domain program registry
+
+Currently this is a permissioned step, please contact the Fogo team with your program ids and any time you need to add another program id.
+
+## Upgrade your program to accept instructions signed by session keys
+
+In SVM programs, it is common to check whether the user's wallet is a signer to manage permissioned instruction calls. As explained in the Deep Dive, this is not the case in sessions. The fogo-sessions-sdk crate provides the helper Session::extract_user_from_signer_or_session. This helper takes in an AccountInfo and your program's program id, checks that the AccountInfo is a signer and will return:
+- The user public key that has delegated permissions to the session if the account was a valid session account
+- The account public key if the account was a signer but not a session account
+- An error if the account was an invalid sessions account (for example if the session is expired or the session was not intended to interact with the current program).
+
+In-session token transfers, in addition to requiring a valid session for the token owner to sign the instruction may only occur as CPIs from an authorized program. This is a security measure aiming to restrict the scope of token transfers a session may do.
+
+For the token program to verify that its being called with these requirements, it will check that a PDA of an authorized program with seeds `fogo_session_program_signer` has signed the transfer. Helpers to craft transfer (and burn) instructions are available in the sdk in fogo_sessions_sdk::token::instruction.
+
+## Updating your frontend
+
 Currently the main intended mechanism for using sessions is by using the
 `@fogo/sessions-sdk-react` typescript package.
 
@@ -17,18 +62,12 @@ interacting with, and managing an app session.
 
 The component takes the following props:
 
-- `sponsor`: the public key of the paymaster sponsor account.  Soon, public
-  paymasters will be available and this prop will not be required.  Until
-  then, use `8HnaXmgFJbvvJxSdjeNyWwMXZb85E35NM4XNg6rxuw3w`
-- `paymasterUrl`: the URL of the paymaster.  Again, this prop will soon not be
-  necessary once public paymasters are available; in the meantime use
-  `https://sessions-example.fogo.io/paymaster`.
+- `network`: Whether this app is for Fogo Testnet or Fogo Mainnet.
 - `domain`: Fogo Sessions includes a mapping indicating which domains are
   allowed to access which contracts.  This prop should be `undefined` if
   `NODE_ENV === 'production'`, but in lower environments, it allows you to
   override the domain in the intent message so you can create sessions for your
   production contracts.
-- `endpoint`: The RPC url for Fogo
 - `tokens`: An array of token mint addresses which this app may request
   permissions for
 - `defaultRequestedLimits`: An object or map that maps token mints to
@@ -36,6 +75,7 @@ The component takes the following props:
   specific set of requested limits in the button or callback that requests
   establishing the session, then these are the limits that the user will be
   asked to approve the app to access.
+- `enableUnlimited`: Whether this app can request sessions without token limits.
 
 ### `<SessionButton />`
 
@@ -89,14 +129,14 @@ export default ({ children, }: { children: ReactNode }) => (
   <html lang="en">
     <body>
       <FogoSessionProvider
-        sponsor="8HnaXmgFJbvvJxSdjeNyWwMXZb85E35NM4XNg6rxuw3w"
-        paymasterUrl="https://sessions-example.fogo.io/paymaster"
-        domain={process.env.NODE_ENV === "production" ? undefined : "https://foo.bar"}
-        endpoint="https://testnet.fogo.io/"
-        tokens={[NATIVE_MINT.toBase58()]}
+        network={Network.Testnet}
+        domain={process.env.NODE_ENV === "production" ? undefined : "https://sessions-example.fogo.io"}
+        tokens={[NATIVE_MINT.toBase58(), "fUSDNGgHkZfwckbr5RLLvRbvqvRcTLdH9hcHJiq4jry"]}
         defaultRequestedLimits={{
           [NATIVE_MINT.toBase58()]: 1_500_000_000n,
+          "fUSDNGgHkZfwckbr5RLLvRbvqvRcTLdH9hcHJiq4jry": 1_000_000_000n
         }}
+        enableUnlimited
       >
         <header>
           <h1>Fogo Sessions Example</h1>
