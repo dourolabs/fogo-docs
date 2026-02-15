@@ -16,7 +16,7 @@ To get around this limitation and make gasless the default experience on Fogo, w
 
 Each app team is responsible for their own segregated paymaster wallet and expected to top it up. To avoid an app's paymaster wallet funding transactions unrelated to their app, they are also responsible for specifying which transactions their paymaster wallet will accept to fund (paymaster filters).
 
-## Sequence diagram
+## Sequence diagram of a typical Sessions interaction
 
 ```mermaid
 sequenceDiagram
