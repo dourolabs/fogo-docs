@@ -1,20 +1,21 @@
 # Integrating Fogo Sessions
 
-Within the Sessions ecosystem, each app is identified by their base URL aka its domain (for example https://sessions-example.fogo.io).
+Within the Sessions ecosystem, each app is identified by their base URL aka its **domain** (for example `https://sessions-example.fogo.io`).
 
 Integrating Fogo Sessions requires the following steps:
-- Registering your domain in the paymaster server.
-- Setting up your domain's program registry: these are the custom program ids that the sessions for your domain are allowed to interact with.
-- Setting up your paymaster filters.
-- Upgrade your program to accept instructions signed by session keys 
-- Update your frontend to use the FogoSessionProvider.
+- [Creating an account in the paymaster server](/user-guides/integrating-fogo-sessions#creating-an-account-in-the-paymaster-server) for your **domain**
+- [Setting up your domain's program **registry**](/user-guides/integrating-fogo-sessions#setting-up-your-domain-s-program-registry): this is an on-chain account that contains the program ids that the sessions for your domain are allowed to interact with
+- [Setting up your paymaster **filters**](/user-guides/integrating-fogo-sessions#setting-up-your-paymaster-filters): these define the set of transactions your app's paymaster wallet is willing to sponsor
+- [Upgrading your on-chain program](/user-guides/integrating-fogo-sessions#upgrading-your-on-chain-program) to accept instructions signed by session keys
+- [Updating your frontend](/user-guides/integrating-fogo-sessions#updating-your-frontend) to support Sessions
 
-https://sessions-example.fogo.io is a working example that integrates Fogo Sessions and may be used as a starting point or reference. It uses the pre-configured domain https://sessions-example.fogo.io. Its program registry uniquely contains the program id Examtz9qAwhxcADNFodNA2QpxK7SM9bCHyiaUvWvFBM3 and its paymaster filters will only accept either transactions involving creating or revoking sessions or calling the ExampleTransfer instruction of Examtz9qAwhxcADNFodNA2QpxK7SM9bCHyiaUvWvFBM3.
+https://sessions-example.fogo.io hosts a working example that integrates Fogo Sessions and may be used as a starting point or reference
+- Its program registry uniquely contains the program id `Examtz9qAwhxcADNFodNA2QpxK7SM9bCHyiaUvWvFBM3`. 
+- Its paymaster filters will only accept either transactions involving session management or calling the `ExampleTransfer` instruction of `Examtz9qAwhxcADNFodNA2QpxK7SM9bCHyiaUvWvFBM3`
+- The example program can be found [here](https://github.com/fogo-foundation/fogo-sessions/tree/main/programs/example)
+- The frontend code for the example app can be found [here](https://github.com/fogo-foundation/sessions-example)
 
-- The frontend code for the example app can be found: 
-- The example program can be found
-
-## Registering your domain in the paymaster server
+## Creating an account in the paymaster server
 
 Currently this is a permissioned step, please contact the Fogo team with your domain's base URL.
 
@@ -22,26 +23,32 @@ The paymaster API is available at:
 - https://fogo-testnet.dourolabs-paymaster.xyz/ for testnet
 - https://fogo-mainnet.dourolabs-paymaster.xyz/ for mainnet
 
-Once registered, the call to https://fogo-testnet.dourolabs-paymaster.xyz/api/sponsor_pubkey?domain=https://sessions-example.fogo.io should be succesful (replace https://sessions-example.fogo.io by your domain).
+Once your domain is registered, the API call to https://fogo-testnet.dourolabs-paymaster.xyz/api/sponsor_pubkey?domain=https://sessions-example.fogo.io should be succesful (replace `https://sessions-example.fogo.io` by your domain).
+
+## Setting up your domain's program registry
+
+Currently this is a permissioned step, please contact the Fogo team with your program ids and any time you need to add another program id or would like to remove an outdated program id.
 
 ## Setting up your paymaster filters
 
-Link to the paymaster runbook.
+The [paymaster runbook](https://dourolabs.notion.site/paymaster-runbook) is a great resource to learn about how to set up the filters and protect your paymaster wallet from being drained.
 
-## Setting up your domain program registry
+## Upgrading your on-chain program
 
-Currently this is a permissioned step, please contact the Fogo team with your program ids and any time you need to add another program id.
+### Resolving the user's wallet public key
 
-## Upgrade your program to accept instructions signed by session keys
+In SVM programs, it is common to check whether the user's wallet is a signer to authenticate them in permissioned instruction calls. In Sessions, a session key signs the instruction instead of the user's wallet. The [`fogo-sessions-sdk` crate](https://crates.io/crates/fogo-sessions-sdk) provides the helper function [`Session::extract_user_from_signer_or_session`](https://docs.rs/fogo-sessions-sdk/latest/fogo_sessions_sdk/session/struct.Session.html#method.extract_user_from_signer_or_session) to resolve the user's wallet public key from a session account. 
 
-In SVM programs, it is common to check whether the user's wallet is a signer to manage permissioned instruction calls. As explained in the Deep Dive, this is not the case in sessions. The fogo-sessions-sdk crate provides the helper Session::extract_user_from_signer_or_session. This helper takes in an AccountInfo and your program's program id, checks that the AccountInfo is a signer and will return:
-- The user public key that has delegated permissions to the session if the account was a valid session account
-- The account public key if the account was a signer but not a session account
-- An error if the account was an invalid sessions account (for example if the session is expired or the session was not intended to interact with the current program).
+This helper takes in an `AccountInfo` and your program's program id, checks that the `AccountInfo` is a signer and will return:
+- The public key that has delegated permissions to the session if the account is a valid session account
+- The public key of the `AccountInfo` if the account was a signer but not a session account
+- An error if the account was an invalid sessions account (for example if the session is expired or the session was not intended to interact with the current program because the program is not in the domain's [domain registry](/user-guides/integrating-fogo-sessions#setting-up-your-domain-s-program-registry)).
 
-In-session token transfers, in addition to requiring a valid session for the token owner to sign the instruction may only occur as CPIs from an authorized program. This is a security measure aiming to restrict the scope of token transfers a session may do.
+### Making token transfers 
 
-For the token program to verify that its being called with these requirements, it will check that a PDA of an authorized program with seeds `fogo_session_program_signer` has signed the transfer. Helpers to craft transfer (and burn) instructions are available in the sdk in fogo_sessions_sdk::token::instruction.
+In-session token transfers, in addition to requiring a valid session for the owner of the token account to sign the instruction, may only occur as CPIs from an **authorized program** (a program that is present in the [domain registry](/user-guides/integrating-fogo-sessions#setting-up-your-domain-s-program-registry) for the app). This is a security measure aiming to restrict the scope of token transfers a session may do.
+
+For the token program to verify that its being called with these requirements, it will check that a PDA of an authorized program with seeds [`fogo_session_program_signer`](https://docs.rs/fogo-sessions-sdk/latest/fogo_sessions_sdk/token/constant.PROGRAM_SIGNER_SEED.html) has signed the transfer. Helpers to craft transfer (and burn) instructions are available in the sdk in [`fogo_sessions_sdk::token::instruction`](https://docs.rs/fogo-sessions-sdk/latest/fogo_sessions_sdk/token/instruction/index.html).
 
 ## Updating your frontend
 
@@ -52,9 +59,9 @@ Refer to the following example apps:
 - [NextJS Fogo Sessions Example](https://github.com/fogo-foundation/sessions-example)
 - [Vite Fogo Sessions Example](https://github.com/fogo-foundation/sessions-example-vite)
 
-## React API
+### React API
 
-### `<FogoSessionProvider />`
+#### `<FogoSessionProvider />`
 
 The `<FogoSessionProvider />` component sets up the React app to be able to use
 Fogo Sessions, and adds the necessary context and modal components for creating,
@@ -77,7 +84,7 @@ The component takes the following props:
   asked to approve the app to access.
 - `enableUnlimited`: Whether this app can request sessions without token limits.
 
-### `<SessionButton />`
+#### `<SessionButton />`
 
 The `<SessionButton />` component adds a button to the page which enables users
 to connect to the app using Fogo Sessions. When connected, the button opens a
@@ -90,7 +97,7 @@ The component accepts the following props:
   differ from `defaultRequestedLimits` when clicking this button, then you can
   pass the limits you want to request here.
 
-### `useSession()`
+#### `useSession()`
 
 This hook returns the current state of the session. The return type is a
 discriminated union of possible states, and if the session is in an established
@@ -113,14 +120,17 @@ current state:
   - `useSession().walletPublicKey`: The public key of the wallet that created
     the session
   - `useSession().sessionPublicKey`: The public key of the session
+  - `useSession().expiration`: The `Date` of expiration of the session
   - `useSession().sendTransaction()`: Pass a list of `TransactionInstruction`
     objects to this function to send the transaction to the paymaster, and
-    then on to the chain.
+    then on to the chain. You may also provide the name of the `variation` for the paymaster to match against to have better error messages in case the paymaster rejects your transaction.
   - `useSession().payer`: The public key of the paymaster sponsor
   - `useSession().endSession()`: Call this to destroy the session key and end
     the session
+  - `useSession().getSessionWrapInstructions()`: This function returns a set of instructions such that after executing, the user will have at least `amount` Wrapped FOGO tokens that the session may subsequently use (sessions don't have access to the users native balance directly). This is useful if you need your app to interact with the user's FOGO balance.
+  - `useSession().getSessionUnwrapInstructions()`: This function returns a set of instructions such that after executing, the user will have no Wrapped FOGO, in other words, all the user's FOGO balance will be unwrapped. By convention, this should be called at the end of any transaction where the user may receive Wrapped FOGO, so that FOGO in users' wallets is fully unwrapped "at rest".
 
-## Context Setup
+### Context Setup
 
 The following example demonstrates setting up the context for the app:
 
