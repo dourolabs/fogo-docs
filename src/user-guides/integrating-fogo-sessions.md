@@ -124,13 +124,28 @@ current state:
   - `useSession().sessionPublicKey`: The public key of the session
   - `useSession().expiration`: The `Date` of expiration of the session
   - `useSession().sendTransaction()`: Pass a list of `TransactionInstruction`
-    objects to this function to send the transaction to the paymaster, and
-    then on to the chain. You may also provide the name of the `variation` for the paymaster to match against to have better error messages in case the paymaster rejects your transaction.
+    objects to this function to send the transaction to the paymaster. See the next section for more
   - `useSession().payer`: The public key of the paymaster sponsor
   - `useSession().endSession()`: Call this to destroy the session key and end
     the session
   - `useSession().getSessionWrapInstructions()`: This function returns a set of instructions such that after executing, the user will have at least `amount` Wrapped FOGO tokens that the session may subsequently use (sessions don't have access to the users native balance directly). This is useful if you need your app to interact with the user's FOGO balance.
   - `useSession().getSessionUnwrapInstructions()`: This function returns a set of instructions such that after executing, the user will have no Wrapped FOGO, in other words, all the user's FOGO balance will be unwrapped. By convention, this should be called at the end of any transaction where the user may receive Wrapped FOGO, so that FOGO in users' wallets is fully unwrapped "at rest".
+
+### `sendTransaction`
+
+`sendTransaction` accepts the instructions to send to the paymaster in the following formats:
+- an array of `@solana/web3.js` `TransactionInstruction`
+- an array of `@solana/kit` `Instruction`
+- a `@solana/web3.js` `VersionedTransaction`
+- a `@solana/kit` `Transaction & TransactionWithLifetime`
+
+Moreover, this method can be configured by passing a `SendTransactionOptions` object as the second argument with the following keys:
+- `variation` gives the paymaster server a hint of which transaction filter to match against, resulting in better error messages if the paymaster server rejects the transaction
+- `feeMint`: in which mint to charge the paymaster fee to the user if the paymaster is configured to charge a fee. Currently Wrapped FOGO and USDC are supported. This field, in combination with `variation` (which is also required in this scenario) will help the client generate the instruction that transfers the paymaster fee from the user to the paymaster. This instruction may also be crafted manually and passed to `sendTransaction` by using `createPaymasterFeeInstruction` in [`@fogo/sessions-sdk`](https://www.npmjs.com/package/@fogo/sessions-sdk)
+- `extraSigners`: extra signers that will be used to sign the transaction before being sent to the paymaster
+- `addressLookupTable`: a custom address lookup table to be used by the transaction to be sent to the paymaster
+
+Note that `feeMint`, `extraSigners` and `addressLookupTable` will only have an effect if `sendTransaction` receives an array of instructions and not a transaction since editing the transaction would invalidate any pre-existing signatures.
 
 ### Context Setup
 
