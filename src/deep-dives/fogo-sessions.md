@@ -21,16 +21,18 @@ Each app team is responsible for their own segregated paymaster wallet and expec
 ```mermaid
 sequenceDiagram
     autonumber
-    participant U as User
+    actor U as User
     participant D as Browser 
-    participant W as Browser Wallet (Main Key)
-    participant SK as Session Key
+    box Key Material
+    participant W as 🔑 Browser Wallet (Main Key)
+    participant SK as 🔑 Session Key
+    end
     participant PM as Paymaster 
     participant RPC
 
     box Solana Virtual Machine
-    participant SM as Session Manager 
-    participant P as App Program 
+    participant SM as 📜 Session Manager
+    participant P as 📜 App Program
     end
 
 Note over U,P: Session creation
