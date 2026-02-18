@@ -22,4 +22,6 @@ The intent message includes some mechanisms to protect users:
 
 ## More information 
 
+To integrate with Sessions, read the [User Guide](/user-guides/integrating-fogo-sessions).
+
 To learn more about how Sessions works under the hood, read the [Deep Dive](/deep-dives/fogo-sessions).

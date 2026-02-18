@@ -35,6 +35,8 @@ The [paymaster runbook](https://dourolabs.notion.site/paymaster-runbook) is a gr
 
 ## Upgrading your on-chain program
 
+Check out the [example program](https://github.com/fogo-foundation/fogo-sessions/tree/main/programs/example) for an example of a program that integrates Sessions using [`fogo-sessions-sdk`](https://crates.io/crates/fogo-sessions-sdk).
+
 ### Resolving the user's wallet public key
 
 In SVM programs, it is common to check whether the user's wallet is a signer to authenticate them in permissioned instruction calls. In Sessions, a session key signs the instruction instead of the user's wallet. The [`fogo-sessions-sdk` crate](https://crates.io/crates/fogo-sessions-sdk) provides the helper function [`Session::extract_user_from_signer_or_session`](https://docs.rs/fogo-sessions-sdk/latest/fogo_sessions_sdk/session/struct.Session.html#method.extract_user_from_signer_or_session) to resolve the user's wallet public key from a session account. 
