@@ -1,4 +1,4 @@
-<style module>
+<style scoped>
   svg {
     display: inline-block;
     height: 1.4em;

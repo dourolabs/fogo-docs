@@ -53,6 +53,12 @@ export default defineConfig({
         ],
       },
       {
+        text: "Deep Dives",
+        items: [
+          { text: "Fogo Sessions", link: "/deep-dives/fogo-sessions" },
+        ],
+      },
+      {
         text: "Ecosystem",
         items: [
           { text: "Pyth Lazer Oracle", link: "/ecosystem/pyth-lazer-oracle" },
