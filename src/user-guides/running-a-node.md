@@ -22,6 +22,7 @@ From within the source directory:
 
 Then, set up your node machine and create a config file using the [Testnet config example](/testnet.html#example-configuration). To start the validator:
 
+- Run `fdctl configure fini all --config /path/to/config.toml`
 - Run `fdctl configure init all --config /path/to/config.toml`
 - Run `fdctl run --config /home/fogo/config.toml`
 
