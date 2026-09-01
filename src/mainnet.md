@@ -22,7 +22,7 @@ A public RPC endpoint is available for users to interact with Mainnet. Users are
 - RPC URL: `https://mainnet.fogo.io`
 - Entrypoints: `["entrypoint1.mainnet.fogo.io:9010", "entrypoint2.mainnet.fogo.io:9010", "entrypoint3.mainnet.fogo.io:9010"]`
 - Genesis hash: `CDLtwKnaCoK157uaHQDj4fHu72AyD2519Cphmpiq6hvT`
-- Shred version: `715`
+- Shred version: `64486`
 
 ## Example Configuration
 
@@ -50,7 +50,7 @@ path = "<YOUR_LEDGER_PATH>"
 identity_path = "<YOUR_IDENTITY_KEYPAIR_PATH>"
 
 expected_genesis_hash = "CDLtwKnaCoK157uaHQDj4fHu72AyD2519Cphmpiq6hvT"
-expected_shred_version = 715
+expected_shred_version = 64486
 
 [snapshots]
 full_snapshot_interval_slots = 22500
